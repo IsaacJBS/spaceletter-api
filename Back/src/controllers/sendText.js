@@ -17,7 +17,6 @@ const sendTextOfNewsletter = async (req, res) => {
 
         const querySearchEmails = 'SELECT * FROM emails';
         const { rows: sendingText } = await connection.query(querySearchEmails);
-        console.log(sendingText)
 
         sendingText.forEach(user => {
             nodemailer.sendMail({
@@ -30,7 +29,6 @@ const sendTextOfNewsletter = async (req, res) => {
                     text: text
                 }
             })
-            console.log(user.email)
         })
 
         return res.status(204).json('Newsletter enviada com sucesso');

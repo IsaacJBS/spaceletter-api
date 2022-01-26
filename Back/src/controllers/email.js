@@ -1,5 +1,7 @@
 const connection = require('../connection');
 const { validationEmail } = require('../models/validationsYup');
+const nodemailer = require('../nodemailer');
+
 
 const registerEmail = async (req, res) => {
     const { email } = req.body;
@@ -20,6 +22,16 @@ const registerEmail = async (req, res) => {
         if (registeringEmail.rowCount === 0) {
             res.status(400).json('Não foi possível cadastrar o e-mail')
         }
+
+        nodemailer.sendMail({
+            from: 'naoresponder@newsletter.com',
+            to: email,
+            subject: "Newsletter",
+            template: 'welcome',
+            context: {
+                email
+            }
+        })
 
         return res.status(204).json('E-mail cadastrado com sucesso')
     } catch (error) {
