@@ -2,7 +2,6 @@ const express = require('express');
 const { validationAdmin } = require('../models/validationsYup');
 const bcrypt = require('bcrypt');
 const connection = require('../connection');
-const e = require('express');
 
 const registerAdmin = async (req, res) => {
     const { email, password } = req.body;
