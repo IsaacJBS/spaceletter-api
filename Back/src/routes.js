@@ -8,6 +8,6 @@ routes.post('/', registerEmail);
 
 routes.post('/admin', registerAdmin);
 
-routes.post('/login', loginAdmin);
+routes.post('/admin/login', loginAdmin);
 
 module.exports = routes;
