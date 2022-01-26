@@ -1,4 +1,3 @@
-const express = require('express');
 const { validationAdmin } = require('../models/validationsYup');
 const bcrypt = require('bcrypt');
 const connection = require('../connection');

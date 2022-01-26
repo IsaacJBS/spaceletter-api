@@ -11,10 +11,16 @@ const validationAdmin = yup.object().shape({
 
 const validationToken = yup.object().shape({
     authorization: yup.string().required()
+});
+
+const validationText = yup.object().shape({
+    title: yup.string().required(),
+    text: yup.string().required()
 })
 
 module.exports = {
     validationEmail,
     validationAdmin,
-    validationToken
+    validationToken,
+    validationText
 }
