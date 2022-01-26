@@ -10,9 +10,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "dotenv": "^14.3.2",
     "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
     "nodemailer": "^6.7.2",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.1",
+    "yup": "^0.32.11",
+    "yup-locales": "^1.2.2"
   }
 }
