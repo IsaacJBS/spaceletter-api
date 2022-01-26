@@ -18,7 +18,6 @@ const loginAdmin = async (req, res) => {
         }
 
         const user = rows[0];
-        console.log(user)
 
         const verifiedPassword = await bcrypt.compare(password, user.password);
 
