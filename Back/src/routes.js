@@ -1,8 +1,7 @@
 const express = require('express');
 const routes = express();
+const { registerEmail } = require('./controllers/email')
 
-routes.get('/', async (req, res) => {
-    res.json({ mensagem: 'oi' })
-})
+routes.post('/', registerEmail);
 
 module.exports = routes;
