@@ -17,7 +17,7 @@ transport.use('compile', handlebars({
         extname: '.handlebars',
         defaultLayout: false
     },
-    viewPath: './views/'
+    viewPath: './src/views'
 }));
 
 module.exports = transport;
