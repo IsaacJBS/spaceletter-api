@@ -25,7 +25,7 @@ const registerAdmin = async (req, res) => {
 
         return res.status(201).json('Admin cadastrado');
     } catch (error) {
-        return res.status(400).json({ mensagem: error.message });
+        return res.status(400).json(error.message);
     }
 }
 

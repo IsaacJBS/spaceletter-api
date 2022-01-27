@@ -21,7 +21,7 @@ const unsub = async (req, res) => {
             return res.status(404).json('Não foi possível excluir o e-mail');
         }
 
-        return res.status(204).json({ mensagem: 'E-mail descadastrado com sucesso' });
+        return res.status(204).json('E-mail descadastrado com sucesso');
     } catch (error) {
         res.status(404).json(error.message)
     }
