@@ -10,11 +10,11 @@ const loginAdmin = async (req, res) => {
     try {
         await validationAdmin.validate(req.body);
 
-        const queryVerifyEmail = 'select * from login where email = $1';
+        const queryVerifyEmail = 'SELECT * FROM login WHERE email = $1';
         const { rows, rowCount } = await connection.query(queryVerifyEmail, [email]);
 
         if (rowCount === 0) {
-            return res.status(404).json({ mensagem: 'Usuário não encontrado' });
+            return res.status(404).json('Usuário não encontrado');
         }
 
         const user = rows[0];
@@ -22,7 +22,7 @@ const loginAdmin = async (req, res) => {
         const verifiedPassword = await bcrypt.compare(password, user.password);
 
         if (!verifiedPassword) {
-            return res.status(404).json({ mensagem: 'Usuário e/ou senha inválido(s).' });
+            return res.status(404).json('Usuário e/ou senha inválido(s).');
         }
 
         const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, { expiresIn: '1d' });
