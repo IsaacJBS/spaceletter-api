@@ -7,7 +7,7 @@ const { sendTextOfNewsletter } = require('./controllers/sendText');
 const { unsub } = require('./controllers/unsub');
 const { verifyToken } = require('./middleware/verifyToken');
 
-routes.post('/', registerEmail);
+routes.post('/register', registerEmail);
 routes.post('/unsub', unsub);
 
 routes.post('/admin', registerAdmin);

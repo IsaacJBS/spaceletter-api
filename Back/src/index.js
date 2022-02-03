@@ -1,5 +1,6 @@
-const app = require('./server')
+const app = require('./server');
+const port = 3001;
 
-app.listen(3001, () => {
-    console.log('Api iniciou')
+app.listen(port, () => {
+    console.log(`Api iniciou na porta ${port}`)
 })
