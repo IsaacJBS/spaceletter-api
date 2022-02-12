@@ -13,14 +13,14 @@ const registerEmail = async (req, res) => {
         const { rowCount: consultedEmail } = await connection.query(queryConsultEmail, [email]);
 
         if (consultedEmail > 0) {
-            res.status(404).json('Email já cadastrado');
+            return res.status(404).json('Email já cadastrado');
         }
 
         const queryRegisterEmail = 'INSERT INTO emails (email) values ($1)';
         const registeringEmail = await connection.query(queryRegisterEmail, [email]);
 
         if (registeringEmail.rowCount === 0) {
-            res.status(400).json('Não foi possível cadastrar o e-mail')
+            return res.status(400).json('Não foi possível cadastrar o e-mail')
         }
 
         nodemailer.sendMail({
@@ -33,9 +33,9 @@ const registerEmail = async (req, res) => {
             }
         })
 
-        return res.status(204).json('E-mail cadastrado com sucesso')
+        return res.status(200).json('Cadastrado com sucesso')
     } catch (error) {
-        res.status(404).json(error.message)
+        return res.status(404).json(error.message)
     }
 }
 
