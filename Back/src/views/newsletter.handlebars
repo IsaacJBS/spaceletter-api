@@ -4,14 +4,8 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Simple Transactional Email</title>
+    <title>Spaceletter News</title>
     <style>
-        /* -------------------------------------
-          GLOBAL RESETS
-      ------------------------------------- */
-
-        /*All the styling goes here*/
-
         img {
             border: none;
             -ms-interpolation-mode: bicubic;
@@ -43,16 +37,12 @@
             vertical-align: top;
         }
 
-        /* -------------------------------------
-          BODY & CONTAINER
-      ------------------------------------- */
-
         .body {
             background-color: #f6f6f6;
             width: 100%;
+            color: #4c1b27;
         }
 
-        /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
         .container {
             display: block;
             margin: 0 auto !important;
@@ -62,7 +52,6 @@
             width: 580px;
         }
 
-        /* This should also be a block element, so that it will fill 100% of the .container */
         .content {
             box-sizing: border-box;
             display: block;
@@ -71,9 +60,6 @@
             padding: 10px;
         }
 
-        /* -------------------------------------
-          HEADER, FOOTER, MAIN
-      ------------------------------------- */
         .main {
             background: #ffffff;
             border-radius: 3px;
@@ -101,14 +87,11 @@
         .footer p,
         .footer span,
         .footer a {
-            color: #999999;
+            color: #4c1b27;
             font-size: 12px;
             text-align: center;
         }
 
-        /* -------------------------------------
-          TYPOGRAPHY
-      ------------------------------------- */
         h1,
         h2,
         h3,
@@ -150,9 +133,6 @@
             text-decoration: underline;
         }
 
-        /* -------------------------------------
-          BUTTONS
-      ------------------------------------- */
         .btn {
             box-sizing: border-box;
             width: 100%;
@@ -198,9 +178,6 @@
             color: #ffffff;
         }
 
-        /* -------------------------------------
-          OTHER STYLES THAT MIGHT BE USEFUL
-      ------------------------------------- */
         .last {
             margin-bottom: 0;
         }
@@ -256,9 +233,6 @@
             margin: 20px 0;
         }
 
-        /* -------------------------------------
-          RESPONSIVE AND MOBILE FRIENDLY STYLES
-      ------------------------------------- */
         @media only screen and (max-width: 620px) {
             table.body h1 {
                 font-size: 28px !important;
@@ -309,9 +283,6 @@
             }
         }
 
-        /* -------------------------------------
-          PRESERVE THESE STYLES IN THE HEAD
-      ------------------------------------- */
         @media all {
             .ExternalClass {
                 width: 100%;
@@ -373,10 +344,10 @@
                                 <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td>
-                                            <p>Olá, a notícia de hoje é: {{ title }}</p>
+                                            <p>Olá, a notícia de hoje é: <strong>{{ title }}</strong> </p>
                                             <p>{{ text }}</p>
                                             <p>Continue assinando nossa newsletter para mais notícias.</p>
-                                            <p>Nos vemos amanhã!</p>
+                                            <p>Nos vemos em breve! 🚀</p>
                                         </td>
                                     </tr>
                                 </table>
@@ -388,14 +359,14 @@
                         <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                             <tr>
                                 <td class="content-block">
-                                    <span class="apple-link">Company Inc, 3 Abbey Road, Salvador BA 440000</span>
+                                    <span class="apple-link">Salvador BA 410000</span>
                                     <br> Não gosta destes emails? <a
-                                        href="http://i.imgur.com/CScmqnj.gif">Desinscrever</a>.
+                                        href="https://spaceletter.vercel.app/unsub">Desinscrever</a>.
                                 </td>
                             </tr>
                             <tr>
                                 <td class="content-block powered-by">
-                                    Powered by <a href="http://htmlemail.io">Newsletter</a>.
+                                    Powered by <a href="http://htmlemail.io">Spaceletter</a>.
                                 </td>
                             </tr>
                         </table>
