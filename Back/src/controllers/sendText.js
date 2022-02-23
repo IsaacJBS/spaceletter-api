@@ -31,7 +31,7 @@ const sendTextOfNewsletter = async (req, res) => {
             })
         })
 
-        return res.status(204).json('Newsletter enviada com sucesso');
+        return res.status(200).json('Newsletter enviada com sucesso');
     } catch (error) {
         return res.status(404).json(error.message);
     }
