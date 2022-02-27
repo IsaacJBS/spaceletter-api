@@ -20,6 +20,8 @@
     "nodemailer-express-handlebars": "^4.0.0",
     "nodemon": "^2.0.15",
     "pg": "^8.7.1",
+    "swagger-autogen": "^2.19.0",
+    "swagger-ui-express": "^4.3.0",
     "yup": "^0.32.11",
     "yup-locales": "^1.2.2"
   }
