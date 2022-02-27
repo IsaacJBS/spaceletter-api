@@ -5,10 +5,10 @@
     "title": "Spaceletter-api",
     "description": "Esta é uma API feita para ser utilizada na Spaceletter, que envia somente um título e um corpo de texto. O servidor que faz o envio dos e-mails é o MailTrap, que é um servidor de testes, caso queira que a API realmente envie e-mail, é só criar um arquivo dotenv, copiar as variáveis que estão no arquivo .env.example e preencher as variáveis NM com o seu servidor de e-mails."
   },
-  "host": "https://spaceletter.herokuapp.com",
+  "host": "spaceletter.herokuapp.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/register": {
