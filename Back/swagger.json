@@ -13,7 +13,7 @@
   "paths": {
     "/register": {
       "post": {
-        "description": "Registra o e-mail do usuário no banco de dados",
+        "description": "Registra o e-mail do usuário no banco de dados.",
         "parameters": [
           {
             "name": "body",
@@ -43,7 +43,7 @@
     },
     "/unsub": {
       "post": {
-        "description": "Exclui o e-mail do usuário do banco de dados",
+        "description": "Exclui o e-mail do usuário do banco de dados.",
         "parameters": [
           {
             "name": "body",
@@ -52,7 +52,7 @@
               "type": "object",
               "properties": {
                 "email": {
-                  "example": "any"
+                  "example": "teste@mail.com"
                 }
               }
             }
@@ -70,7 +70,7 @@
     },
     "/admin": {
       "post": {
-        "description": "Registra um administrador no banco de dados, encriptando a senha",
+        "description": "Registra um administrador no banco de dados, e cria um hash criptografando a senha.",
         "parameters": [
           {
             "name": "body",
