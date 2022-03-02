@@ -7,3 +7,7 @@ Este é o Back End que foi utilizado na [Spaceletter](https://github.com/IsaacJB
 Para acessar a documentação feita com Swagger basta clicar [aqui](https://spaceletter.herokuapp.com/docs/).
 
 ![Imgur](https://i.imgur.com/ypwk7Hj.jpg)
+
+## Tecnologias utlizadas no projeto:
+
+NodeJS, Express, JWT, BCrypt, Nodemailer, Yup, Swagger.
